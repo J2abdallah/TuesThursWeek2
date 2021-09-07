@@ -1,8 +1,9 @@
 package bsu.comp152;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+/*public class Main {
 
     public static void main(String[] args) {
         var reader = new Scanner(System.in);
@@ -12,5 +13,25 @@ public class Main {
         System.out.println("Wow " + age + " years old!");
 
         System.out.println("That's " + dogYears + " in dog years.");
+    }
+
+
+}
+ */
+public class Main{
+    public static void main(String[]Args){
+        var ClassNames = new ArrayList<String>();
+        var reader = new Scanner(System.in);
+
+        System.out.println("Enter you and your classmates names below. Type \"Done\" to finish");
+        var name = " ";
+        while(!name.equals("Done")){
+            name = reader.nextLine();
+            if(name.equals("Done")){
+                break;
+            }
+            ClassNames.add(name);
+        }
+        System.out.println("the list of names in your class is "+ClassNames);
     }
 }
