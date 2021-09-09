@@ -25,13 +25,17 @@ public class Main{
 
         System.out.println("Enter you and your classmates names below. Type \"Done\" to finish");
         var name = " ";
-        while(!name.equals("Done")){
+        while(true){
             name = reader.nextLine();
             if(name.equals("Done")){
                 break;
             }
             ClassNames.add(name);
         }
-        System.out.println("the list of names in your class is "+ClassNames);
+       // System.out.println("the list of names in your class is "+ClassNames);
+        System.out.println("the list of names in your class is ");
+        for (var Name:ClassNames){
+            System.out.println(Name);
+        }
     }
 }
