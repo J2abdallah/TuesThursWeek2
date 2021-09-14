@@ -6,11 +6,15 @@ public class NumberGuess {
         var numberGen = new Random();
         var hiddenNum = numberGen.nextInt(10)+1;
         var commandLineReader = new Scanner(System.in);
-        var guess = commandLineReader.nextInt();
-        System.out.println("enter a number 1-10");
-        if(hiddenNum == guess)
-            System.out.println("you guessed correctly, "+ hiddenNum + " was the hidden number");
-        else
+        var guess = 0;
+
+        while (true) {
+            System.out.println("enter a number 1-10");
+            guess = commandLineReader.nextInt();
+            if (hiddenNum == guess)
+                break;
             System.out.println("you were incorrect " + guess + " was not the number");
+        }
+        System.out.println("You are correct! "+ hiddenNum + " is the hidden number.");
     }
 }
